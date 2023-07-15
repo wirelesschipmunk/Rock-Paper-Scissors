@@ -4,14 +4,26 @@ body {
   box-sizing: border-box;
 }
 
-.big-daddy-logo {
-  vertical-align: middle;
-  width: 20em;
+.google-button {
+  border: none;
+  background: rgb(29, 3, 3);
+
+  transition: all 1s;
+  /* padding-top: 1em;
+  padding-bottom: 0.7em; */
+  padding: 0.9em 0.9em;
   cursor: pointer;
 }
 
-.hamburger-menu {
-  padding-left: 0.1em;
-  padding-right: 0.1em;
-  font-size: 2em;
+.google-button:hover {
+  padding: 0.9em 5em;
+}
+
+.google-button.rotate {
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
+.google-button img {
+  pointer-events: none;
+  width: 87px;
 }
