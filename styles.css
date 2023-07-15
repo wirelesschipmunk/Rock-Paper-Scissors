@@ -1,0 +1,17 @@
+html,
+body {
+  font-family: "Chillax", sans-serif;
+  box-sizing: border-box;
+}
+
+.big-daddy-logo {
+  vertical-align: middle;
+  width: 20em;
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  font-size: 2em;
+}
