@@ -97,13 +97,8 @@ const resetBasic = function () {
 }
 
 const resetAll = function () {
-  for (let i = 0; i < 1; i++) {
-    scissors.all[i].classList.remove("win")
-    paper.all[i].classList.remove("win")
-    rock.all[i].classList.remove("win")
-
-    document.querySelector(`.score-player${i}`).textContent = 0
-  }
+  document.querySelector(".score-player0").textContent = 0
+  document.querySelector(".score-player1").textContent = 0
 
   scissors.p0.classList.remove("clicked")
   paper.p0.classList.remove("clicked")
@@ -112,6 +107,8 @@ const resetAll = function () {
   scissors.p1.classList.remove("clicked")
   paper.p1.classList.remove("clicked")
   rock.p1.classList.remove("clicked")
+
+  resetBasic()
 }
 
 // const settings = {
