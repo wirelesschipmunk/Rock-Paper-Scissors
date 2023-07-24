@@ -3,18 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playground</title>
+    <title>Rock Paper Scissors</title>
 
     <link href="https://api.fontshare.com/v2/css?f[]=chillax@600&display=swap" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
   </head>
-  <body>
-    <h1>Testing Playground</h1>
-    <button class="google-button">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
-      />
-    </button>
-    <script src="coffee.js"></script>
+  <body class="body">
+    <button class="reset">Reset</button>
+    <h1>Rock Paper Scissors</h1>
+    <button class="p0rock rock p0">Rock</button>
+    <button class="p1rock rock p1">Rock</button>
+    <p></p>
+    <button class="p0paper paper p0">Paper</button>
+    <button class="p1paper paper p1">Paper</button>
+    <p></p>
+    <button class="p0scissors scissors p0">Scissors</button>
+    <button class="p1scissors scissors p1">Scissors</button>
+    <p></p>
+    <button class="shoot">Shoot</button>
+    <div class="container">
+      <div class="score-player0 p0">0</div>
+      <div class="score-player1 p1">0</div>
+    </div>
+
+    <!-- <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h3>Settings</h3>
+      <button class="dark">Dark Mode</button>
+      <h6>*More to be added</h6>
+    </div> -->
+    <div class="overlay hidden"></div>
   </body>
+  <script src="coffee.js"></script>
 </html>
