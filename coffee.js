@@ -100,6 +100,9 @@ const resetAll = function () {
   document.querySelector(".score-player0").textContent = 0
   document.querySelector(".score-player1").textContent = 0
 
+  score.p0 = 0
+  score.p1 = 0
+
   scissors.p0.classList.remove("clicked")
   paper.p0.classList.remove("clicked")
   rock.p0.classList.remove("clicked")
@@ -170,6 +173,8 @@ for (let i = 0; i < scissors.all.length; i++) {
     resetBasic()
   })
 }
+
+// Shoot
 
 shootBtn.addEventListener("click", () => {
   if (determineWin(...activeObjects) === "p1") {
