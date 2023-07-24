@@ -114,13 +114,13 @@ const resetAll = function () {
   resetBasic()
 }
 
-// const settings = {
-//   settingsBtn: document.querySelector(".settings"),
-//   window: document.querySelector(".modal"),
-//   overlay: document.querySelector(".overlay"),
-//   closeBtn: document.querySelector(".close-modal"),
-//   darkBtn: document.querySelector(".dark"),
-// }
+const settings = {
+  settingsBtn: document.querySelector(".settings"),
+  window: document.querySelector(".modal"),
+  overlay: document.querySelector(".overlay"),
+  closeBtn: document.querySelector(".close-modal"),
+  lightBtn: document.querySelector(".light"),
+}
 
 // clicking
 // messy but works
@@ -200,16 +200,20 @@ resetBtn.addEventListener("click", () => {
 
 // settings
 
-// settings.settingsBtn.addEventListener("click", () => {
-//   settings.window.classList.toggle("hidden")
-//   settings.overlay.classList.toggle("hidden")
-// })
+settings.settingsBtn.addEventListener("click", () => {
+  settings.window.classList.toggle("hidden")
+  settings.overlay.classList.toggle("hidden")
+})
 
-// settings.closeBtn.addEventListener("click", () => {
-//   settings.window.classList.toggle("hidden")
-//   settings.overlay.classList.toggle("hidden")
-// })
+settings.closeBtn.addEventListener("click", () => {
+  settings.window.classList.add("hidden")
+  settings.overlay.classList.add("hidden")
+})
 
-// settings.darkBtn.addEventListener("click", () => {
-//   document.querySelector("body").classList.toggle("darkMode")
-// })
+settings.lightBtn.addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("lightMode")
+  document.querySelector("html").classList.toggle("lightMode")
+  settings.lightBtn.textContent === "Light Mode"
+    ? (settings.lightBtn.textContent = "Dark Mode")
+    : (settings.lightBtn.textContent = "Light Mode")
+})
