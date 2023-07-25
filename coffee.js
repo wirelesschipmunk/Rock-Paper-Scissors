@@ -10,52 +10,24 @@
  scissors paper
 */
 
-// const winConditions = {
-//   rockRock: "tie",
-//   paperPaper: "tie",
-//   scissorsScissors: "tie",
-//   rockPaper: "p1",
-//   rockScissors: "p0",
-//   paperRock: "p0",
-//   paperScissors: "p1",
-//   scissorsRock: "p1",
-//   scissorsPaper: "p0",
-// }
+const winConditions = {
+  rockpaper: "p1",
+  rockscissors: "p0",
+  paperrock: "p0",
+  paperscissors: "p1",
+  scissorsrock: "p1",
+  scissorspaper: "p0",
+}
 
 let activeObjects = []
 
 const determineWin = function (p0object, p1object) {
   let winner
+  let objects = p0object + p1object
+
   if (p0object !== p1object) {
-    if (p0object === "rock" && p1object === "paper") {
-      winner = "p1"
-      return winner
-    }
-
-    if (p0object === "rock" && p1object === "scissors") {
-      winner = "p0"
-      return winner
-    }
-
-    if (p0object === "paper" && p1object === "rock") {
-      winner = "p0"
-      return winner
-    }
-
-    if (p0object === "paper" && p1object === "scissors") {
-      winner = "p1"
-      return winner
-    }
-
-    if (p0object === "scissors" && p1object === "rock") {
-      winner = "p1"
-      return winner
-    }
-
-    if (p0object === "scissors" && p1object === "paper") {
-      winner = "p0"
-      return winner
-    }
+    winner = winConditions[objects]
+    return winner
   }
 }
 
